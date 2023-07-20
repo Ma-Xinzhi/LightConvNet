@@ -1,0 +1,36 @@
+# Model
+network: LightConvNet
+networkArgs: 
+  num_classes: 4
+  num_samples: 1000
+  num_channels: 22
+  num_bands: 9
+  embed_dim: 64
+  win_len: 250
+  num_heads: 8
+  weight_softmax: True
+  bias: False
+
+# Data
+dataPath: dataset/bci_iv_2a/multifreq
+outFolder: output/bci_iv_2a
+
+# Training
+preferedDevice: gpu
+nGPU: 0
+randomSeed: 0
+
+batchSize: 150
+validationSet: 0.2
+
+maxEpochs: 500
+numEpochsEarlyStop: 50
+maxEpochsAfterEarlyStop: 200
+continueAfterEarlyStop: True
+
+lr: 0.001
+lrFactor: 0.6
+lrPatience: 20
+lrMin: 0.0001
+
+
