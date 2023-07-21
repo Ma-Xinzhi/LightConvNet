@@ -12,19 +12,8 @@ networkArgs:
   bias: False
 
 # Data
-dataPath: dataset/openBMI/two_seconds/multifreq
-outFolder: output/openBMI/two_seconds
-subId: 51
-filterBank: 
-  - [4,8]
-  - [8,12]
-  - [12,16]
-  - [16,20] 
-  - [20,24] 
-  - [24,28]
-  - [28,32]
-  - [32,36]
-  - [36,40]
+dataPath: dataset/openBMI/multifreq
+outFolder: output/openBMI
 
 # Training
 preferedDevice: gpu

@@ -13,7 +13,7 @@ networkArgs:
 
 # Data
 dataPath: dataset/bci_iv_2a/multifreq
-outFolder: output/bci_iv_2a/
+outFolder: output/bci_iv_2a
 
 # Training
 preferedDevice: gpu
