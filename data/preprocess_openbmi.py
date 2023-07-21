@@ -44,7 +44,7 @@ def preprocessKoreaDataset(datasetPath, savePath, epochWindow=[0,4],
     
     if not os.path.exists(savePath):
         os.makedirs(savePath)
-    print('Processed data will be saved in folder', savePath)
+    print('Processed raw data will be saved in folder', savePath)
 
     for sub in subjects:
         print(f'Processing subject No. {sub+1}'.format(sub))
@@ -64,7 +64,7 @@ def multifreqKoreaDataset(datasetPath, savePath, numFreq, transform):
     
     if not os.path.exists(savePath):
         os.makedirs(savePath)
-    print('Processed data will be saved in folder', savePath)
+    print('Processed multi-view data will be saved in folder', savePath)
 
     for sub in subjects:
         print(f'Processing subject No. {sub+1}'.format(sub))
@@ -98,7 +98,7 @@ if __name__ == '__main__':
     datasetPath = 'E:/Dataset/OpenBMI'
     raw_savePath = 'dataset/openBMI/raw'
     multifreq_savePath = 'dataset/openBMI/multifreq'
-    
+
     preprocessKoreaDataset(datasetPath, raw_savePath)
 
     filtBank = [[4,8],[8,12],[12,16],[16,20],[20,24],[24,28],[28,32],[32,36],[36,40]]

@@ -15,6 +15,9 @@ label_files = ['A0'+str(i)+'E.mat' for i in range(1,10)]
 
 save_path = 'dataset/bci_iv_2a/raw'
 
+if not os.path.exists(save_path):
+    os.makedirs(save_path)
+
 event_description = {'783':"CueUnknown"}
 
 for file in data_files:

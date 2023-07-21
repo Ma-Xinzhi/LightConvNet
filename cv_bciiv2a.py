@@ -116,14 +116,17 @@ def main(config):
             testResultsCV.append(testResult)
 
         testAcc = np.array([r['acc'] for r in testResultsCV])
+        testF1score = np.array([r['f1-score'] for r in testResultsCV])
         testCm = np.array([r['cm'] for r in testResultsCV])
 
         avgAcc = np.mean(testAcc)
+        avgF1score = np.mean(testF1score)
         avgCm = np.mean(testCm, axis=0)
 
-        avgResult = {'acc': avgAcc, 'cm': avgCm}
+        avgResult = {'acc': avgAcc, 'f1-score': avgF1score, 'cm': avgCm}
 
         print('Average accuracy:', avgAcc)
+        print('Average f1-score:', avgF1score)
         with open(os.path.join(outPath, 'TestAvgResult.txt'), 'w') as fp:
             for key, value in avgResult.items():
                 fp.write(f'{key}: {value}\n'.format(key, value))

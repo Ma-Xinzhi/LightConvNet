@@ -206,17 +206,19 @@ class baseModel():
 
     def calculateResults(self, preds, trues, confusionMatrix=False, classes=None):
         acc = accuracy_score(trues, preds)
-        f1score = f1_score(trues, preds, labels=range(len(classes)), average='weighted')
 
-        if confusionMatrix:
-            if classes is not None:
-                cm = confusion_matrix(trues, preds, labels=range(len(classes)), normalize='true')
-            else:
+        if classes is None:
+            if confusionMatrix:
                 cm = confusion_matrix(trues, preds)
-            
-            return {'acc':acc, 'f1-score':f1score, 'cm':cm}
-        
-        return {'acc':acc, 'f1-score':f1score}
+                return {'acc':acc, 'cm':cm}
+            else:
+                return {'acc':acc}
+        else:
+            f1score = f1_score(trues, preds, labels=range(len(classes)), average='weighted')
+            if confusionMatrix:
+                cm = confusion_matrix(trues, preds, labels=range(len(classes)), normalize='true')
+                return {'acc':acc, 'f1-score':f1score, 'cm':cm}
+            return {'acc':acc, 'f1-score':f1score}
 
     def plotLossAndAcc(self, trainResults, savePath=None):
         host = host_subplot(111)
