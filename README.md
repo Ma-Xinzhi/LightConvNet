@@ -1,5 +1,5 @@
 # LightConvNet
-## A Temporal Dependency Learning CNN with Attention Mechanism for MI-EEG Decoding
+## A Temporal Dependency Learning CNN with Attention Mechanism for MI-EEG Decoding [[paper]](https://doi.org/10.1109/TNSRE.2023.3299355)
 This is the PyTorch implementation of the temporal dependency learning CNN for MI-EEG decoding.
 ## Network Architecture
 ![Network architecture](https://github.com/Ma-Xinzhi/LightConvNet/blob/main/network_architecture.png)
