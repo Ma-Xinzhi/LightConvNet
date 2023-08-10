@@ -21,3 +21,14 @@ This repository is designed as a toolbox that provides all necessary tools for t
 ## Results
 The classification results for our proposed network and other competing architectures are as follows:
 ![Results](https://github.com/Ma-Xinzhi/LightConvNet/blob/main/results.png)
+## Citation
+If you find this code useful, please cite us in your paper.
+> @article{ma2023temporal,\
+　 title={A Temporal Dependency Learning CNN With Attention Mechanism for MI-EEG Decoding},\
+　 author={Ma, Xinzhi and Chen, Weihai and Pei, Zhongcai and Liu, Jingmeng and Huang, Bin and Chen, Jianer},\
+　 journal={IEEE Transactions on Neural Systems and Rehabilitation Engineering},\
+　 year={2023},\
+　 volume={31},\
+　 pages={3188-3200},\
+　 doi={10.1109/TNSRE.2023.3299355}\
+}
